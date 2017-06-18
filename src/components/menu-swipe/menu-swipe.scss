@@ -1,0 +1,87 @@
+.menu-swipe-list {
+    // float: left;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    background-color: $brown;
+    color: $text-white;
+    box-shadow: 1px 1px 2px rgba(0,0,0, .55);
+}
+
+.menu-swipe-list li {
+    overflow: hidden;
+    height: 103px;
+    border-bottom: 1px solid #372929;
+}
+
+.menu-swipe-list div {
+    float: left;
+    height: 100%;
+    background-color: $yellow;
+    margin-left: -110%; // initially hide menu
+    transition: margin-left .3s;
+
+    &.active {
+        margin-left: 0;
+    }
+}
+
+.menu-swipe-list span {
+    float: right;
+    width: 20px;
+    margin-right: -20px;
+    font-family: $liga;
+    color: $yellow;
+    text-indent: -6px;
+}
+
+.menu-swipe-list div a {
+    display: block;
+    width: 70px; height: 35px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 25px;
+    font-family: $liga;
+    text-decoration: none;
+    color: $text-brown;
+    transition: all .3s;
+
+    &:hover {
+        background-color: $dark-yellow;
+        color: $text-white;
+    }
+}
+
+.menu-swipe-list img {
+    display: block;
+    float: left;
+    border: 5px solid;
+    border-color: #372929;
+    margin: 15px 10px 15px 15px;
+    border-radius: 50%;
+    transition: all .3s;
+}
+
+.menu-swipe-list p {
+    height: 67px;
+    line-height: 22px;
+    margin: 0;
+    padding: 10px 20px 0 0;
+    transition: opacity .3s;
+}
+
+@media screen and (max-width: 320px) {
+    .menu-swipe-list span {
+        margin-top: 45px;
+    }
+
+    .menu-swipe-list .active ~ p {
+        opacity: 0;
+    }
+
+    .menu-swipe-list .active ~ img {
+        margin-left: 40px;
+    }
+}

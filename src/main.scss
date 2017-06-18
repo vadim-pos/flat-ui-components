@@ -1,0 +1,63 @@
+/* ============= Variables ============= */
+/* ------------------------------------- */
+// Font size for the root html element
+$baseFontSize: 14px;
+
+// Colors
+$dark-brown: #361c12;
+$brown: #4f3b3b;
+$dark-red: #9d321b;
+$red: #e56655;
+$dark-yellow: #cd9c50;
+$yellow: #f4d37a;
+$cream: #f0e9dd;
+
+// Text colors
+$text-brown: #4f3b3b;
+$text-white: #fff;
+
+// Fonts
+$liga: 'ligaregular';
+
+/* ================ Globals ================ */
+/* ----------------------------------------- */
+
+body, html {
+    height: 100%;
+}
+html {
+    box-sizing: border-box;
+    font-size: $baseFontSize;
+}
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Helvetica, arial, sans-serif;
+}
+body > h2 {
+    text-align: center;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+} 
+
+/* ================= Fonts ================= */
+/* ----------------------------------------- */
+
+@font-face {
+    font-family: 'ligaregular';
+    src: url('fonts/websymbolsliga-regular-webfont.eot');
+    src: url('fonts/websymbolsliga-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/websymbolsliga-regular-webfont.woff2') format('woff2'),
+         url('fonts/websymbolsliga-regular-webfont.woff') format('woff'),
+         url('fonts/websymbolsliga-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =============== Flat UI Components =============== */
+/* -------------------------------------------------- */
+
+@import 'components/nav/nav';
+@import 'components/menu-swipe/menu-swipe';
+@import 'components/menu-search/menu-search';
