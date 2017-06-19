@@ -1,0 +1,56 @@
+input.form,
+div.form input,
+textarea.form-text,
+div.form-text textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: $brown;
+    color: $text-white;
+    line-height: 25px;
+    resize: none;
+}
+
+input.form, div.form input {
+    width: 100%;
+    padding: 5px 20px;
+    border-radius: 20px;   
+}
+
+.form span + input {
+    padding-left: 35px;
+    margin: 0;
+}
+
+.form span {
+    display: block;
+    position: absolute;
+    width: 25px; height: 25px;
+    line-height: 25px;
+    margin: 5px 0 0 5px;
+    background-color: $yellow;
+    color: $text-brown;
+    text-align: center;
+    font-family: $liga;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+textarea.form-text, div.form-text textarea {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-text span {
+    display: block;
+    position: absolute;
+    color: $yellow;
+    font-family: $liga;
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+}
+
+div.form-text span + textarea {
+    margin: 0;
+    padding-left: 35px;
+}

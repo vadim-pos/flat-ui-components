@@ -1,0 +1,136 @@
+.tabs {
+    overflow: hidden;
+    background-color: #dbd8d2;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0,0,0, .55);
+}
+
+.tabs > ul {
+    width: 230px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $cream;
+}
+
+.tabs > ul li {
+    border-bottom: 1px solid #ddd8ce;
+}
+
+.tabs > ul a {
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    color: $text-brown;
+    font-size: 18px;
+    transition: background-color .3s;
+
+    &:hover {
+        background-color: $yellow;
+        
+        &:before {
+            content: ']';
+            float: right;
+            width: 15px;
+            margin: 0 -15px -60px 0;
+            font-family: $liga;
+            color: $yellow;
+            text-shadow: 1px 1px 1px rgba(0,0,0, .2);
+        }
+    }
+}
+
+.tabs > ul span {
+    float: left;
+    width: 40px;
+    margin: 0 20px;
+    font-family: $liga;
+    font-size: 40px;
+    text-align: center;
+}
+
+.tabs > ul, .tabs > div { // create equal height columns
+    display: table-cell;
+    vertical-align: top;
+}
+
+.tabs > div {
+    color: $text-brown;
+    padding: 30px;
+}
+
+.tabs > h1 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.tabs p {
+    line-height: 150%;
+    font-size: 16px;
+}
+
+.tabs > div > div *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.tabs > div > div *:last-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+// menu tigger
+.tabs > a {
+    display: none;
+}
+
+.tabs > a span {
+    float: left;
+    margin-left: 20px;
+    font-family: $liga;
+    font-size: 40px;
+}
+
+.tabs > div > div {
+    display: none;
+}
+
+.tabs > div > div:first-child {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .tabs > a {
+        display: block;
+        line-height: 50px;
+        background-color: $brown;
+        color: $text-white;
+        text-align: center;
+        font-size: 18px;
+        text-decoration: none;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $yellow;
+            color: $text-brown;
+        }
+    }
+
+    .tabs > ul, .tabs > div {
+        display: block;
+    }
+
+    .tabs > ul {
+        width: 100%;
+        display: none;
+    }
+
+    .tabs.opened > ul {
+        display: block;
+    }
+
+    .tabs.opened > div {
+        display: none;
+    }
+}

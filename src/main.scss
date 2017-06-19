@@ -1,8 +1,5 @@
 /* ============= Variables ============= */
 /* ------------------------------------- */
-// Font size for the root html element
-$baseFontSize: 14px;
-
 // Colors
 $dark-brown: #361c12;
 $brown: #4f3b3b;
@@ -19,6 +16,23 @@ $text-white: #fff;
 // Fonts
 $liga: 'ligaregular';
 
+// Font size for the root html element
+$baseFontSize: 14px;
+
+/* ============= Mixins ============= */
+/* ---------------------------------- */
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
 /* ================ Globals ================ */
 /* ----------------------------------------- */
 
@@ -33,6 +47,7 @@ body {
     margin: 0;
     padding: 20px;
     font-family: Helvetica, arial, sans-serif;
+    color: $text-brown;
 }
 body > h2 {
     text-align: center;
@@ -61,3 +76,7 @@ body > h2 {
 @import 'components/nav/nav';
 @import 'components/menu-swipe/menu-swipe';
 @import 'components/menu-search/menu-search';
+@import 'components/menu-simple/menu-simple';
+@import 'components/form/form';
+@import 'components/datepicker/datepicker';
+@import 'components/tabs/tabs';

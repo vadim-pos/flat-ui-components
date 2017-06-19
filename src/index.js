@@ -19,3 +19,5 @@ import './main.scss';
 // --- Flat UI Components ---
 import './components/menu-swipe/menu-swipe';
 import './components/menu-search/menu-search';
+import './components/datepicker/datepicker';
+import './components/tabs/tabs';
